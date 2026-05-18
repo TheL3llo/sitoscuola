@@ -1,35 +1,53 @@
 <!DOCTYPE html>
+<!-- Specifica che il documento utilizza la versione HTML5, lo standard moderno -->
 <html lang="it">
+<!-- Inizio del documento HTML. L'attributo lang="it" indica ai browser e ai motori di ricerca che la lingua è l'italiano -->
 
 <head>
+    <!-- L'elemento <head> contiene informazioni "nascoste" sulla pagina: metadati, titolo e collegamenti a risorse esterne -->
     <meta charset="UTF-8">
+    <!-- Specifica la codifica dei caratteri. UTF-8 supporta praticamente tutti i caratteri e i simboli (incluse le lettere accentate italiane) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tag fondamentale per il "Responsive Design": fa in modo che la pagina si adatti correttamente sugli schermi di smartphone e tablet -->
     <meta name="description" content="Sito personale di Lello - Progetto scolastico di Informatica">
+    <!-- Una breve descrizione del sito, viene usata dai motori di ricerca (come Google) nei risultati di ricerca -->
     <title>Lello — Sito Personale</title>
+    <!-- Il titolo della pagina, quello che appare nella "scheda" in alto del browser -->
     <link rel="stylesheet" href="style.css">
+    <!-- Collega questo file HTML al file CSS (style.css) dove si trovano le istruzioni grafiche -->
     <link
         href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
+    <!-- Collega la pagina a Google Fonts per caricare dei caratteri personalizzati (Sora e Lora) -->
 </head>
 
 <body>
+    <!-- L'elemento <body> contiene tutto il contenuto visibile agli utenti sulla pagina web -->
 
     <!-- Intestazione del sito (Header) -->
     <header class="header">
+        <!-- Il tag semantico <header> definisce la parte superiore (intestazione) della pagina. Ha una classe "header" per lo stile in CSS -->
         <div class="container">
+            <!-- Un <div> è un contenitore generico. La classe "container" lo userà nel CSS per limitarne la larghezza e centrarlo nello schermo -->
             <img src="https://i.postimg.cc/pL2MrGkH/IMG-0766(1).jpg" alt="Avatar di Lello" class="profile-img"
                 referrerpolicy="no-referrer">
+            <!-- L'elemento <img> inserisce un'immagine. "src" è il link dell'immagine. "alt" è un testo alternativo, importante se l'immagine non si carica e per gli screen reader. "class" per regolarne l'aspetto CSS -->
             <h1>Emanuele</h1>
+            <!-- <h1> è il titolo principale (Intestazione di livello 1). Ce ne dovrebbe essere uno per pagina. -->
             <p class="header-subtitle">Studente · Sportivo</p>
+            <!-- Il tag <p> indica un paragrafo di testo, usato qui come sottotitolo. -->
         </div>
     </header>
 
     <!-- Contenuto principale della pagina -->
     <main class="container">
+        <!-- Il tag semantico <main> racchiude il contenuto principale e distintivo di questa specifica pagina. -->
 
         <!-- Sezione "Chi sono" -->
         <section class="card">
+            <!-- <section> raggruppa contenuti tematici. La classe "card" la renderà simile a un "riquadro/scheda" tramite CSS -->
             <h2>Chi sono</h2>
+            <!-- <h2> è un sottotitolo (Intestazione di livello 2). -->
             <p>
                 Mi chiamo Emanuele(detto Lello) e sono un ragazzo tranquillo, curioso e abbastanza socievole. Mi piace
                 passare il tempo
@@ -46,8 +64,11 @@
             <p class="card-intro">Le materie che seguo a scuola, tra quelle che mi piacciono di più e quelle più
                 impegnative.</p>
             <div class="subjects-grid">
+                <!-- Usiamo questo div per creare una "griglia" (grid) nel CSS per disporre le materie in colonne -->
                 <div class="subject-item favourite">
+                    <!-- Singolo elemento per la materia, ha due classi: "subject-item" per lo stile base e "favourite" per colorarlo di verde -->
                     <span class="subject-icon">🇬🇧</span>
+                    <!-- <span> è un contenitore generico "inline", usato qui per contenere l'icona/emoji -->
                     <span class="subject-name">Inglese</span>
                     <span class="subject-tag">Preferita</span>
                 </div>
@@ -57,6 +78,7 @@
                     <span class="subject-tag">Preferita</span>
                 </div>
                 <div class="subject-item">
+                    <!-- Questo elemento non ha una classe extra, quindi userà solo il colore di base -->
                     <span class="subject-icon">📐</span>
                     <span class="subject-name">Matematica</span>
                 </div>
@@ -65,6 +87,7 @@
                     <span class="subject-name">Storia</span>
                 </div>
                 <div class="subject-item hard">
+                    <!-- La classe "hard" permetterà al CSS di renderlo arancione per indicare "materia impegnativa" -->
                     <span class="subject-icon">📖</span>
                     <span class="subject-name">Italiano</span>
                     <span class="subject-tag">Impegnativa</span>
@@ -81,7 +104,9 @@
         <section class="card">
             <h2>I miei Hobby</h2>
             <ul>
+                <!-- L'elemento <ul> crea un elenco non ordinato (una lista con i pallini) -->
                 <li>Ascoltare musica</li>
+                <!-- Il tag <li> definisce una voce (List Item) all'interno dell'elenco -->
                 <li>Giocare ai videogiochi</li>
                 <li>Guardare serie TV e film</li>
                 <li>Passare tempo al computer</li>
@@ -95,7 +120,9 @@
         <section class="card">
             <h2>Le mie Competenze</h2>
             <div class="skills-grid">
+                <!-- Div contenitore per disporre le competenze affiancate -->
                 <div class="skill-badge">Palestra</div>
+                <!-- Badge o "etichetta" per ogni competenza, per dargli un aspetto da bottone -->
                 <div class="skill-badge">Creatività</div>
                 <div class="skill-badge">Problem Solving</div>
                 <div class="skill-badge">Lavoro di squadra</div>
@@ -104,6 +131,7 @@
 
         <!-- Sezione "I miei Sogni" -->
         <section class="card card-dreams">
+            <!-- Uniamo la classe base "card" con "card-dreams" per personalizzare specificamente il bordo di questa sezione in viola -->
             <h2>I miei Sogni</h2>
             <p class="card-intro">Le cose che mi piacerebbe fare o raggiungere in futuro.</p>
             <div class="dreams-list">
@@ -111,6 +139,7 @@
                     <span class="dream-icon">✈️</span>
                     <div>
                         <strong>Lavorare nell'aeronautica</strong>
+                        <!-- <strong> evidenzia un testo dandogli molta importanza, rendendolo in grassetto -->
                         <p>Mi piacerebbe fare qualcosa legato all'aeronautica, che sia pilotare o altro ancora da
                             scoprire.</p>
                     </div>
@@ -137,7 +166,9 @@
 
     <!-- Piè di pagina (Footer) -->
     <footer class="footer">
+        <!-- Tag semantico <footer> per chiudere la pagina. Spesso contiene i copyright, i link legali o contatti. -->
         <p>&copy; 2026 Emanuele 4FS &mdash; Liceo Ettore Majorana .</p>
+        <!-- &copy; e &mdash; sono entità HTML. Vengono renderizzate rispettivamente come il simbolo di copyright (©) e il trattino lungo (—) -->
     </footer>
 
 </body>

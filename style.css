@@ -1,267 +1,420 @@
 /* RESET DI BASE */
 * {
+    /* Il selettore universale '*' applica queste regole a TUTTI gli elementi HTML nella pagina. */
     margin: 0;
+    /* Rimuove i margini (spazio esterno) predefiniti del browser, garantendo un aspetto coerente ovunque. */
     padding: 0;
+    /* Rimuove il padding (spazio interno) predefinito. */
     box-sizing: border-box;
+    /* Permette di includere padding e border nella larghezza e altezza totale dell'elemento, evitando che "sfori" o si ingrandisca inaspettatamente. */
 }
 
 /* STILE GLOBALE DEL BODY */
 body {
+    /* Il selettore 'body' definisce le impostazioni generali dell'intera pagina. */
     font-family: 'Sora', sans-serif;
+    /* Imposta il font 'Sora' (importato nell'HTML da Google). Se 'Sora' non è disponibile, usa un font senza grazie ('sans-serif') di riserva. */
     background-color: #f1f5f9;
+    /* Imposta un colore di sfondo grigio-azzurrino molto chiaro (#f1f5f9). */
     color: #334155;
+    /* Imposta il colore principale del testo (un grigio-blu molto scuro) per una buona leggibilità. */
     line-height: 1.6;
+    /* Aumenta l'altezza della riga (interlinea) al 160% rispetto alla dimensione del font, rendendo il testo molto più facile da leggere. */
 }
 
 /* CONTENITORE PRINCIPALE */
 .container {
+    /* Le classi si indicano con il punto '.'. Questo contenitore serve a limitare l'ampiezza del contenuto centrale. */
     max-width: 800px;
+    /* Limita la larghezza massima a 800 pixel. Sui grandi schermi come il PC, non si allargherà all'infinito. */
     margin: 0 auto;
+    /* '0' toglie il margine sopra e sotto, 'auto' distribuisce uniformemente lo spazio a destra e sinistra, così l'elemento si CENTRA orizzontalmente. */
     padding: 0 20px;
+    /* Aggiunge 20 pixel di spazio laterale all'interno del contenitore. Se lo schermo è piccolo (es. cellulare), il testo non toccherà i bordi laterali. */
 }
 
-/* HEADER */
+/* HEADER (Intestazione) */
 .header {
     background: linear-gradient(135deg, #1e40af, #3b82f6);
+    /* Crea una sfumatura di colore (gradiente) per lo sfondo dell'header, che parte dall'angolo in alto a sinistra (135 gradi) andando da un blu scuro a uno chiaro. */
     color: white;
+    /* Tutto il testo nell'header sarà di colore bianco. */
     padding: 60px 0 50px;
+    /* Spaziatura interna (padding): 60px sopra, 0 ai lati, 50px sotto. */
     text-align: center;
+    /* Centra orizzontalmente tutto il testo e gli elementi (come l'immagine) all'interno dell'header. */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Aggiunge un'ombra morbida sotto l'header per dargli un senso di "profondità" rispetto al contenuto che segue. */
     border-bottom-left-radius: 30px;
+    /* Arrotonda l'angolo in basso a sinistra dell'header di 30 pixel. */
     border-bottom-right-radius: 30px;
+    /* Arrotonda l'angolo in basso a destra dell'header. */
     margin-bottom: 40px;
+    /* Lascia uno spazio di 40 pixel sotto l'header prima delle "card" successive. */
 }
 
 /* IMMAGINE PROFILO */
 .profile-img {
     width: 200px;
+    /* Larghezza fissa dell'immagine: 200 pixel. */
     height: 200px;
+    /* Altezza fissa: 200 pixel. Avendo larghezza e altezza uguali, forma un quadrato. */
     border-radius: 50%;
+    /* Questo trucco arrotonda l'immagine al 50%, trasformando il quadrato in un CERCHIO perfetto. */
     object-fit: cover;
+    /* Nel caso la foto originale non fosse perfettamente quadrata, questa regola la taglia per riempire il cerchio senza deformarla. */
     border: 4px solid #ffffff;
+    /* Aggiunge un bordo solido bianco di 4 pixel tutto intorno alla foto. */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Aggiunge una leggera ombra dietro l'immagine per staccarla dallo sfondo. */
     margin-bottom: 15px;
+    /* Spazio di 15 pixel tra la foto e il titolo 'Emanuele' sottostante. */
 }
 
+/* TITOLO PRINCIPALE NELL'HEADER (h1) */
 .header h1 {
     font-size: 3.2rem;
+    /* Grandezza del testo del titolo principale. 'rem' è relativo alla dimensione font del browser, qui circa 51px. */
     font-weight: 800;
+    /* Spessore del carattere (grassetto extra, Extra-bold). */
     letter-spacing: -1px;
+    /* Avvicina leggermente le lettere del titolo l'una all'altra (-1px). */
     margin-bottom: 8px;
+    /* Distanza tra l'h1 e il sottotitolo. */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Leggera ombreggiatura sotto il testo del titolo per migliorarne il contrasto con lo sfondo sfumato. */
 }
 
 /* Sottotitolo nell'header */
 .header-subtitle {
     font-size: 1rem;
+    /* Dimensione standard per questo testo (circa 16px). */
     font-weight: 300;
+    /* Font molto sottile e leggero (Light). */
     opacity: 0.85;
+    /* Rende il testo del sottotitolo leggermente trasparente (85%) così non è "forte" quanto il titolo bianco puro. */
     letter-spacing: 1px;
+    /* Allarga un po' lo spazio tra i caratteri per un aspetto più pulito ed elegante. */
 }
 
-/* CARD BASE */
+/* CARD BASE (Riquadri bianchi delle sezioni) */
 .card {
     background-color: #ffffff;
+    /* Lo sfondo della "scheda" è bianco per contrastare col grigino dello sfondo globale. */
     border-radius: 16px;
+    /* Arrotonda gli angoli della scheda. */
     padding: 35px;
+    /* Crea uno spazio generoso all'interno della scheda prima del testo. */
     margin-bottom: 30px;
+    /* Separa ogni scheda dalla successiva con 30px di spazio esterno. */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    /* Un'ombra multipla e delicata che fa sembrare che il riquadro "galleggi" sulla pagina. */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Preparazione per gli effetti hover: definisce che se la "transform" o la "box-shadow" cambiano, devono farlo "dolcemente" in 0.3 secondi. */
     border-top: 4px solid #3b82f6;
+    /* Una linea colorata (blu) lungo il bordo superiore della scheda per decorazione. */
 }
 
+/* EFFETTO AL PASSAGGIO DEL MOUSE SULLE CARD (:hover) */
 .card:hover {
+    /* La pseudo-classe ':hover' si attiva quando passi il cursore del mouse sopra l'elemento. */
     transform: translateY(-5px);
+    /* Sposta la scheda intera verso l'alto (sull'asse Y) di 5 pixel, dando l'effetto che "si alzi". */
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Ingrandisce l'ombra sotto, rinforzando l'effetto che la card si stia sollevando verso di te. */
 }
 
 /* TITOLI H2 DENTRO LE CARD */
 .card h2 {
     color: #1e293b;
+    /* Colore scuro, quasi nero, per un ottimo contrasto. */
     font-size: 1.7rem;
+    /* Dimensione generosa ma più piccola dell'h1. */
     font-weight: 700;
+    /* Grassetto (Bold). */
     margin-bottom: 18px;
+    /* Distanza sotto il titolo prima del testo normale. */
 }
 
-/* Piccolo testo introduttivo sotto l'h2 */
+/* Piccolo testo introduttivo sotto l'h2 nelle card */
 .card-intro {
     color: #64748b;
+    /* Colore grigio intermedio per le descrizioni (distinguendole dal testo normale). */
     font-size: 0.95rem;
+    /* Leggermente più piccolo del testo normale. */
     margin-bottom: 22px;
+    /* Crea spazio tra questo testo e la griglia di elementi successiva. */
     margin-top: -8px;
+    /* Avvicina questo testo all'H2 sovrastante (togliendo un po' di margine imposto dal titolo). */
 }
 
-/* ---- SEZIONE MATERIE ---- */
+/* ---- SEZIONE MATERIE (Griglia CSS) ---- */
 .subjects-grid {
     display: grid;
+    /* Attiva il layout 'CSS Grid', perfetto per fare colonne ed elementi allineati come in una tabella flessibile. */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Il "cuore" del Responsive: crea quante più colonne possibili che siano larghe ALMENO 200px. Lo spazio rimanente (1fr) se lo dividono. Se lo schermo è piccolo, andranno a capo in automatico! */
     gap: 12px;
+    /* Spazio tra ogni elemento nella griglia (tra righe e colonne). */
 }
 
+/* Singolo elemento Materia */
 .subject-item {
     display: flex;
+    /* Il 'flexbox' allinea comodamente l'icona e il nome sulla stessa riga. */
     align-items: center;
+    /* Centra verticalmente gli elementi flex. */
     gap: 10px;
+    /* Distanza tra l'icona (emoji), il nome e il tag "Preferita". */
     background-color: #f8fafc;
+    /* Grigio chiarissimo. */
     border: 1px solid #e2e8f0;
+    /* Bordo sottile grigio. */
     border-radius: 12px;
+    /* Angoli arrotondati della piccola scheda materia. */
     padding: 12px 16px;
+    /* Spazio interno. */
     transition: all 0.2s ease;
+    /* Come le card, anche qui c'è un'animazione quando le cose cambiano (es. all'hover). */
     position: relative;
+    /* Utile in caso si volessero aggiungere posizionamenti assoluti all'interno. */
 }
 
+/* Effetto mouse sopra la singola materia */
 .subject-item:hover {
     border-color: #93c5fd;
+    /* Al passaggio del mouse il bordo diventa azzurro... */
     background-color: #eff6ff;
+    /* ...e lo sfondo leggermente più blu. */
 }
 
-/* Materia preferita: bordo verde */
+/* Materia preferita (classe aggiuntiva .favourite) */
 .subject-item.favourite {
     border-color: #bbf7d0;
+    /* Bordo verde per evidenziarla. */
     background-color: #f0fdf4;
+    /* Sfondo verdino chiaro. */
 }
 
-/* Materia impegnativa: bordo arancio */
+/* Materia impegnativa (classe aggiuntiva .hard) */
 .subject-item.hard {
     border-color: #fed7aa;
+    /* Bordo arancione. */
     background-color: #fff7ed;
+    /* Sfondo arancio chiaro. */
 }
 
+/* L'icona o l'emoji della materia */
 .subject-icon {
     font-size: 1.3rem;
+    /* Ingrandisce un po' l'emoji. */
 }
 
+/* Il nome della materia */
 .subject-name {
     font-weight: 600;
+    /* Semi-grassetto. */
     color: #1e293b;
+    /* Testo scuro. */
     font-size: 0.95rem;
+    /* Dimensione base. */
     flex: 1;
+    /* Fondamentale nel layout Flex: prende tutto lo spazio rimasto. Questo "spinge" l'etichetta .subject-tag all'estrema destra del blocco! */
 }
 
+/* La targhetta (es. "Preferita", "Impegnativa") */
 .subject-tag {
     font-size: 0.7rem;
+    /* Testo molto piccolo, stile etichetta. */
     font-weight: 600;
+    /* Testo "cicciotto" per esser letto a dimensioni piccole. */
     padding: 2px 8px;
+    /* Poco spazio interno (alto/basso piccolo, destra/sinistra più grande). */
     border-radius: 999px;
+    /* Un trucco: dare un raggio esagerato (es. 999px) trasforma i lati del rettangolo in semicerchi perfetti, forma "a pillola". */
     white-space: nowrap;
+    /* Evita che l'etichetta vada su due righe se lo spazio è stretto. */
 }
 
+/* Colori della targhetta per materia preferita (verde) */
 .favourite .subject-tag {
     background-color: #dcfce7;
     color: #166534;
 }
 
+/* Colori della targhetta per materia impegnativa (arancio scuro) */
 .hard .subject-tag {
     background-color: #ffedd5;
     color: #9a3412;
 }
 
-/* ---- SEZIONE HOBBY (lista) ---- */
+/* ---- SEZIONE HOBBY (Stile della lista con i punti) ---- */
 ul {
     list-style-type: none;
+    /* Rimuove i "pallini" predefiniti del browser per gli elenchi, in modo da metterne di personalizzati. */
 }
 
 ul li {
     padding: 10px 0;
+    /* Spazio sopra e sotto per ogni elemento (hobby) della lista. */
     color: #475569;
+    /* Testo grigio. */
     border-bottom: 1px solid #f1f5f9;
+    /* Aggiunge una sottile riga grigia tra un elemento e l'altro (separatore). */
     position: relative;
+    /* Necessario per posizionare il pallino personalizzato fatto con lo pseudo-elemento ::before. */
     padding-left: 25px;
+    /* Crea spazio a sinistra, "spostando" il testo, in cui verrà inserito il pallino blu. */
 }
 
+/* Il pallino della lista personalizzato tramite ::before */
 ul li::before {
+    /* Lo pseudo-elemento "::before" inserisce contenuto PRIMA dell'elemento (in questo caso prima del testo del LI) senza sporcare l'HTML. */
     content: "•";
+    /* Inserisce letteralmente un pallino grosso di testo. */
     color: #3b82f6;
+    /* Il pallino sarà di colore blu vivace. */
     font-size: 1.5rem;
+    /* Ingrandisce molto il pallino. */
     position: absolute;
+    /* Posizionamento assoluto: toglie il pallino dal normale flusso della pagina e lo piazza esattamente dove vogliamo noi, rispetto al LI. */
     left: 0;
+    /* Lo posiziona tutto a sinistra (nel margine di 25px che avevamo creato). */
     top: 5px;
+    /* Lo abbassa un pochino per allinearlo visivamente con il centro del testo. */
     line-height: 1;
+    /* Riduce lo spazio verticale occupato dal pallino in modo che non scombini le dimensioni della riga. */
 }
 
 ul li:last-child {
     border-bottom: none;
+    /* La pseudo-classe ':last-child' colpisce solo L'ULTIMO elemento della lista. Qui gli diciamo di togliere il bordo inferiore, non essendoci elementi sotto. */
 }
 
-/* ---- SEZIONE COMPETENZE ---- */
+/* ---- SEZIONE COMPETENZE (I badge) ---- */
 .skills-grid {
     display: flex;
+    /* Usa un layout Flexbox. */
     flex-wrap: wrap;
+    /* 'wrap' è importantissimo: dice agli elementi flex che, se finiscono lo spazio orizzontale, POSSONO andare a capo (come il testo). */
     gap: 12px;
+    /* Spazio di 12 pixel in orizzontale e verticale tra le targhette. */
     margin-top: 10px;
+    /* Un piccolo spazio superiore. */
 }
 
 .skill-badge {
     background-color: #f8fafc;
+    /* Sfondo grigino. */
     color: #1d4ed8;
+    /* Testo blu scuro. */
     padding: 10px 20px;
+    /* Dimensioni interne comode. */
     border-radius: 12px;
+    /* Arrotonda gli angoli. */
     font-size: 0.95rem;
     font-weight: 600;
     border: 1px solid #bfdbfe;
+    /* Bordo celeste. */
     transition: all 0.3s ease;
+    /* Effetto transizione di 0.3s per quando il mouse ci passerà sopra. */
     cursor: default;
+    /* Il cursore del mouse non cambia quando vi passa sopra (visto che non sono veri bottoni cliccabili). */
 }
 
+/* Hover effect sui badge delle competenze */
 .skill-badge:hover {
     background-color: #3b82f6;
+    /* Diventa blu intenso al passaggio del mouse. */
     color: #ffffff;
+    /* Il testo diventa bianco. */
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    /* Ombra bluastra in tono col badge che gli dà effetto di luminosità. */
     transform: translateY(-2px);
+    /* Si solleva leggermente (2 pixel verso l'alto). */
 }
 
 /* ---- SEZIONE SOGNI ---- */
 .card-dreams {
     border-top-color: #6366f1;
-    /* viola per distinguerla */
+    /* Sovrascrive la riga colorata in alto della scheda "card" base. Per i sogni, la riga sarà VIOLA (#6366f1) invece che blu. */
 }
 
 .dreams-list {
     display: flex;
     flex-direction: column;
+    /* Le 'flex-direction: column' posiziona i sogni uno SOTTO l'altro verticalmente. */
     gap: 20px;
+    /* 20px di distanza verticale tra un sogno e l'altro. */
 }
 
+/* Singolo blocco sogno */
 .dream-item {
     display: flex;
+    /* Dentro il sogno usiamo un layout in riga per mettere icona a sinistra e testo a destra. */
     gap: 16px;
+    /* Spazio tra icona e testo. */
     align-items: flex-start;
+    /* 'flex-start' spinge l'allineamento in alto. Così se il testo del sogno ha più righe, l'icona resta attaccata in alto e non scivola al centro verticale. */
     padding: 16px;
+    /* Spazio interno del rettangolo del sogno. */
     background-color: #f8fafc;
+    /* Sfondo grigio. */
     border-radius: 12px;
+    /* Angoli smussati. */
     border: 1px solid #e2e8f0;
+    /* Bordo sottile grigio. */
     transition: all 0.2s ease;
+    /* Prepara l'animazione al passaggio del mouse. */
 }
 
+/* Hover sul blocco del sogno */
 .dream-item:hover {
     background-color: #f5f3ff;
+    /* Lo sfondo vira al viola chiarissimo. */
     border-color: #c4b5fd;
+    /* Il bordo diventa viola più scuro. */
 }
 
+/* Icona/Emoji del sogno */
 .dream-icon {
     font-size: 1.8rem;
+    /* Icona piuttosto grande. */
     flex-shrink: 0;
+    /* 'flex-shrink: 0' impedisce all'icona di schiacciarsi e rimpicciolirsi se per caso il testo di lato è molto lungo. Manterrà sempre le sue proporzioni originali. */
     margin-top: 2px;
+    /* Piccola correzione ottica per farla sembrare allineata al rigo superiore del testo. */
 }
 
+/* Titolo in grassetto (strong) del sogno */
 .dream-item strong {
     display: block;
+    /* Di default 'strong' è 'inline' e non si adatterebbe bene con margini sopra/sotto. Metterlo 'block' lo fa comportare come un paragrafo che va a capo da solo. */
     color: #1e293b;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 4px;
+    /* Spazietto prima della descrizione. */
 }
 
+/* Descrizione del sogno */
 .dream-item p {
     color: #64748b;
+    /* Grigio intermedio. */
     font-size: 0.92rem;
+    /* Un pelino più piccolo. */
     line-height: 1.5;
+    /* Interlinea comoda. */
 }
 
-/* FOOTER */
+/* FOOTER (Piè di pagina) */
 .footer {
     text-align: center;
+    /* Centra il testo ("Copyright ..."). */
     padding: 30px 0 50px;
+    /* Molto spazio sopra (30px) e sotto (50px). */
     color: #64748b;
+    /* Colore grigio scuro, meno contrastato, in quanto testo di minore importanza. */
     font-size: 0.92rem;
+    /* Leggermente rimpicciolito. */
 }
