@@ -1,33 +1,30 @@
-/* RESET DI BASE: Rimuoviamo i margini predefiniti */
+/* RESET DI BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* STILE GLOBALE DEL CORPO (BODY) */
+/* STILE GLOBALE DEL BODY */
 body {
-    font-family: 'Inter', sans-serif;
-    /* Sfondo grigio-blu molto chiaro e moderno */
+    font-family: 'Sora', sans-serif;
     background-color: #f1f5f9;
     color: #334155;
     line-height: 1.6;
 }
 
-/* CONTENITORE PRINCIPALE: Centra il contenuto e larghezza massima */
+/* CONTENITORE PRINCIPALE */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* STILE DELL'INTESTAZIONE (HEADER) */
+/* HEADER */
 .header {
-    /* Gradiente modificato: ora è BLU (dal blu scuro al blu brillante) */
     background: linear-gradient(135deg, #1e40af, #3b82f6);
     color: white;
-    padding: 60px 0;
-    /* Leggermente ridotto per far spazio alla foto */
+    padding: 60px 0 50px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 30px;
@@ -35,31 +32,34 @@ body {
     margin-bottom: 40px;
 }
 
-/* STILE PER L'IMMAGINE DEL PROFILO NELL'HEADER */
+/* IMMAGINE PROFILO */
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    /* Rende l'immagine perfettamente rotonda */
     object-fit: cover;
-    /* Ritaglia l'immagine centrata */
     border: 4px solid #ffffff;
-    /* Bordo bianco spesso per farla staccare dal blu */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Ombra morbida */
     margin-bottom: 15px;
-    /* Spazio sotto la foto */
 }
 
 .header h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -1px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* STILE DELLE SEZIONI BIANCHE (CARD) */
+/* Sottotitolo nell'header */
+.header-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.85;
+    letter-spacing: 1px;
+}
+
+/* CARD BASE */
 .card {
     background-color: #ffffff;
     border-radius: 16px;
@@ -67,7 +67,6 @@ body {
     margin-bottom: 30px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Bordo superiore ora è BLU (#3b82f6) */
     border-top: 4px solid #3b82f6;
 }
 
@@ -76,28 +75,88 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* STILE PER LE FOTO DENTRO LE CARD */
-.card-img {
-    width: 100%;
-    /* Occupa tutta la larghezza disponibile */
-    max-height: 250px;
-    /* Non diventa troppo alta */
-    object-fit: cover;
-    /* Mantiene le proporzioni tagliando gli eccessi */
-    border-radius: 12px;
-    /* Angoli arrotondati */
-    margin-bottom: 20px;
-    /* Spazio tra la foto e il testo sotto */
-}
-
-/* TITOLI DELLE SEZIONI H2 DENTRO LE CARD */
+/* TITOLI H2 DENTRO LE CARD */
 .card h2 {
     color: #1e293b;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-/* STILE DELLE LISTE (per gli hobby) */
+/* Piccolo testo introduttivo sotto l'h2 */
+.card-intro {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+    margin-top: -8px;
+}
+
+/* ---- SEZIONE MATERIE ---- */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.subject-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.subject-item:hover {
+    border-color: #93c5fd;
+    background-color: #eff6ff;
+}
+
+/* Materia preferita: bordo verde */
+.subject-item.favourite {
+    border-color: #bbf7d0;
+    background-color: #f0fdf4;
+}
+
+/* Materia impegnativa: bordo arancio */
+.subject-item.hard {
+    border-color: #fed7aa;
+    background-color: #fff7ed;
+}
+
+.subject-icon {
+    font-size: 1.3rem;
+}
+
+.subject-name {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.95rem;
+    flex: 1;
+}
+
+.subject-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.favourite .subject-tag {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.hard .subject-tag {
+    background-color: #ffedd5;
+    color: #9a3412;
+}
+
+/* ---- SEZIONE HOBBY (lista) ---- */
 ul {
     list-style-type: none;
 }
@@ -112,7 +171,6 @@ ul li {
 
 ul li::before {
     content: "•";
-    /* Colore pallino: Blu */
     color: #3b82f6;
     font-size: 1.5rem;
     position: absolute;
@@ -125,18 +183,16 @@ ul li:last-child {
     border-bottom: none;
 }
 
-/* GRIGLIA PER LE COMPETENZE */
+/* ---- SEZIONE COMPETENZE ---- */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-/* STILE DEI BADGE DELLE COMPETENZE (I "bottoncini") */
 .skill-badge {
     background-color: #f8fafc;
-    /* Testo blu scuro */
     color: #1d4ed8;
     padding: 10px 20px;
     border-radius: 12px;
@@ -148,18 +204,64 @@ ul li:last-child {
 }
 
 .skill-badge:hover {
-    /* Sfondo blu quando passi il mouse */
     background-color: #3b82f6;
     color: #ffffff;
-    /* Ombra blu */
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     transform: translateY(-2px);
 }
 
-/* PIE' DI PAGINA (FOOTER) */
+/* ---- SEZIONE SOGNI ---- */
+.card-dreams {
+    border-top-color: #6366f1;
+    /* viola per distinguerla */
+}
+
+.dreams-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dream-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.dream-item:hover {
+    background-color: #f5f3ff;
+    border-color: #c4b5fd;
+}
+
+.dream-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.dream-item strong {
+    display: block;
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dream-item p {
+    color: #64748b;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 30px 0 50px;
     color: #64748b;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
 }

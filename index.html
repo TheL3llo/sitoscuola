@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito personale</title>
+    <meta name="description" content="Sito personale di Lello - Progetto scolastico di Informatica">
+    <title>Lello — Sito Personale</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +19,8 @@
         <div class="container">
             <img src="https://i.postimg.cc/pL2MrGkH/IMG-0766(1).jpg" alt="Avatar di Lello" class="profile-img"
                 referrerpolicy="no-referrer">
-            <h1>Lello</h1>
+            <h1>Emanuele</h1>
+            <p class="header-subtitle">Studente · Sportivo</p>
         </div>
     </header>
 
@@ -27,12 +31,50 @@
         <section class="card">
             <h2>Chi sono</h2>
             <p>
-                Mi chiamo Emanuele(Lello) e sono un ragazzo tranquillo, curioso. Mi piace passare il tempo con gli
-                amici, ascoltare musica e stare al computer, soprattutto per divertirmi o imparare qualcosa di
+                Mi chiamo Emanuele(detto Lello) e sono un ragazzo tranquillo, curioso e abbastanza socievole. Mi piace
+                passare il tempo
+                con gli amici, ascoltare musica e stare al computer, soprattutto per divertirmi o imparare qualcosa di
                 nuovo. Sono una persona che quando trova qualcosa che gli interessa si impegna molto e cerca sempre di
                 migliorarsi. Nel tempo libero mi piace rilassarmi giocando, guardando serie TV o semplicemente facendo
                 cose che mi appassionano. Mi considero anche abbastanza creativo e aperto a nuove esperienze.
             </p>
+        </section>
+
+        <!-- Sezione "Le mie Materie" -->
+        <section class="card">
+            <h2>Le mie Materie</h2>
+            <p class="card-intro">Le materie che seguo a scuola, tra quelle che mi piacciono di più e quelle più
+                impegnative.</p>
+            <div class="subjects-grid">
+                <div class="subject-item favourite">
+                    <span class="subject-icon">🇬🇧</span>
+                    <span class="subject-name">Inglese</span>
+                    <span class="subject-tag">Preferita</span>
+                </div>
+                <div class="subject-item favourite">
+                    <span class="subject-icon">💻</span>
+                    <span class="subject-name">Informatica</span>
+                    <span class="subject-tag">Preferita</span>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-icon">📐</span>
+                    <span class="subject-name">Matematica</span>
+                </div>
+                <div class="subject-item">
+                    <span class="subject-icon">🌍</span>
+                    <span class="subject-name">Storia</span>
+                </div>
+                <div class="subject-item hard">
+                    <span class="subject-icon">📖</span>
+                    <span class="subject-name">Italiano</span>
+                    <span class="subject-tag">Impegnativa</span>
+                </div>
+                <div class="subject-item hard">
+                    <span class="subject-icon">💡</span>
+                    <span class="subject-name">Fisica</span>
+                    <span class="subject-tag">Impegnativa</span>
+                </div>
+            </div>
         </section>
 
         <!-- Sezione "I miei Hobby" -->
@@ -60,11 +102,42 @@
             </div>
         </section>
 
+        <!-- Sezione "I miei Sogni" -->
+        <section class="card card-dreams">
+            <h2>I miei Sogni</h2>
+            <p class="card-intro">Le cose che mi piacerebbe fare o raggiungere in futuro.</p>
+            <div class="dreams-list">
+                <div class="dream-item">
+                    <span class="dream-icon">✈️</span>
+                    <div>
+                        <strong>Lavorare nell'aeronautica</strong>
+                        <p>Mi piacerebbe fare qualcosa legato all'aeronautica, che sia pilotare o altro ancora da
+                            scoprire.</p>
+                    </div>
+                </div>
+                <div class="dream-item">
+                    <span class="dream-icon">📸</span>
+                    <div>
+                        <strong>Viaggiare e scoprire nuovi posti</strong>
+                        <p>Ho voglia di esplorare il mondo, conoscere culture diverse e vivere nuove esperienze.</p>
+                    </div>
+                </div>
+                <div class="dream-item">
+                    <span class="dream-icon">📈</span>
+                    <div>
+                        <strong>Migliorarmi ogni giorno</strong>
+                        <p>Che sia nello sport, nello studio o nelle cose che mi piacciono, voglio sempre crescere come
+                            persona.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Piè di pagina (Footer) -->
     <footer class="footer">
-        <p>&copy; 2026 Lello. 18/05/2026. Liceo Scientifico Ettore Majorana.</p>
+        <p>&copy; 2026 Emanuele 4FS &mdash; Liceo Ettore Majorana .</p>
     </footer>
 
 </body>
